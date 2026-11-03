@@ -1,0 +1,26 @@
+{
+  "name": "code-quality-tooling-and-code-review_fix-the-quality-gate",
+  "version": "0.0.0-unreleased",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest",
+    "test:run": "vitest run",
+    "coverage": "vitest run --coverage",
+    "check": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.0",
+    "@types/node": "^22.0.0",
+    "@vitest/coverage-v8": "^2.1.9",
+    "eslint": "^10.0.0",
+    "eslint-plugin-sonarjs": "^4.0.0",
+    "prettier": "^3.3.0",
+    "typescript": "^5.6.0",
+    "typescript-eslint": "^8.72.0",
+    "vitest": "^2.1.9"
+  }
+}
