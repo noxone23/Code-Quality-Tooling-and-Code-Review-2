@@ -9,7 +9,7 @@ export function loyaltyHeaders(): Record<string, string> {
 
 export function calculatePoints(
   total: number,
-  customerType: CustomerType
+  customerType: CustomerType,
 ): number {
   if (customerType === "vip") {
     return Math.floor(total * 2);
