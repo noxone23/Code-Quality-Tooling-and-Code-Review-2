@@ -12,7 +12,9 @@ describe("loyalty.ts", () => {
   it("sollte die Header mit dem Passwort aus der Umgebungsvariable generieren", () => {
     process.env.LOYALTY_PASSWORD = "super_secret_password";
     const headers = loyaltyHeaders();
-    const expectedBase64 = Buffer.from("loyalty:super_secret_password").toString("base64");
+    const expectedBase64 = Buffer.from(
+      "loyalty:super_secret_password",
+    ).toString("base64");
     expect(headers.Authorization).toBe(`Basic ${expectedBase64}`);
   });
 
